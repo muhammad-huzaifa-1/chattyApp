@@ -22,7 +22,9 @@ app.use(cors({
 app.use(cookieparser());
 
 app.use('/api/auth',authRoutes)
-
+app.get("/",(req,res)=>{
+    res.status(200).send("API WORKING)
+})
 app.use('/api/messages', messageRoutes)
 
 server.listen(PORT,()=>{
