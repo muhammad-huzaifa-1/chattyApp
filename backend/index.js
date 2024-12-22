@@ -16,9 +16,9 @@ app.use(express.json({
     limit:"100mb"
 }));
 app.use(cors({
+     credentials:true,
      origin:"https://chatty-app-frontend.vercel.app",
      methods: ["GET", "POST", "PUT","DELETE"],
-     credentials:true
 }));
 app.use(cookieparser());
 
