@@ -9,8 +9,8 @@ router.post("/login",login);
 
 router.post("/logout",logout)
 
-router.put("/update-profile/:_id",Protect_Routes, UpdateProfile)
+router.put("/update-profile/:_id", UpdateProfile)
 
-router.get("/check",Protect_Routes, checkAuth);
+router.get("/check", checkAuth);
 
 export default router;
