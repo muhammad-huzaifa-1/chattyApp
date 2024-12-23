@@ -14,7 +14,7 @@ export const useChatStore = create((set,get)=>({
         set({isUserLoading:true})
         try {
             
-            const result = await axiosInstance.get("/messages/user");
+            const result = await axiosInstance.get(`/messages/user/${localStorage.getItem("authUser")}`);
             
                 set({users:result.data});
                 set({isUserLoading:false})
